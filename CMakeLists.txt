@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.8)
 project(ogre3d-cloth-simulation)
 
 set(CMAKE_CXX_STANDARD 11)
+
+### Set these paths to your own system
 set (PROJECT_FULL_PATH /home/dany/CLionProjects/ogre3d-cloth-simulation)
 set (OGRE_BUILD_PATH /home/dany/Libraries/ogre_build)
 
@@ -13,5 +15,5 @@ add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 find_package(OGRE 1.10 REQUIRED)
 include_directories(${OGRE_INCLUDE_DIRS} ${OIS_INCLUDE_DIRS})
 link_directories(${OGRE_LIBRARY_DIRS})
-file(COPY ${OGRE_CONFIG_DIR}/plugins.cfg ${PROJECT_FULL_PATH}/media/resources.cfg ${PROJECT_FULL_PATH}/media/my.material ${OGRE_BUILD_PATH}/Dependencies/lib/libzzip.so ${OGRE_BUILD_PATH}/Dependencies/lib/libfreetype.so.2.6 DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${OGRE_CONFIG_DIR}/plugins.cfg ${OGRE_BUILD_PATH}/Dependencies/lib/libzzip.so ${OGRE_BUILD_PATH}/Dependencies/lib/libfreetype.so.2.6 DESTINATION ${CMAKE_BINARY_DIR})
 target_link_libraries(${PROJECT_NAME} ${OGRE_LIBRARIES} ${OIS_LIBRARIES} ${OGRE_Overlay_LIBRARIES} ${CEGUI_LIBRARIES})
