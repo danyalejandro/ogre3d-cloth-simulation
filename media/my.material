@@ -1,0 +1,26 @@
+material Solid/WhitePixel
+{
+   receive_shadows off
+   technique
+   {
+      pass
+      {
+         //point_sprites on
+         //polygon_mode points
+         point_size 20
+         lighting off
+         diffuse vertexcolour
+      }
+   }
+}
+
+material Solid/Red {
+   receive_shadows off
+   technique {
+      pass {
+         texture_unit {
+            colour_op_ex source1 src_manual src_current 1 0 0
+         }
+      }
+   }
+}
