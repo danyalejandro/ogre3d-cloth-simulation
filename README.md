@@ -1,6 +1,7 @@
 # ogre3d-cloth-simulation
 
 [![Simulation Youtube video](https://img.youtube.com/vi/sLcg_QD9dTk/0.jpg)](https://www.youtube.com/watch?v=sLcg_QD9dTk)
+
 *(click image for youtube video)*
 
 A 3D simulation of a cloth using physically based methods (arrangements of 3D springs). Built using C++ and Ogre3D.
